@@ -1,0 +1,11 @@
+{
+  "/spotify": {
+    "target": "https://accounts.spotify.com",
+    "pathRewrite": {
+      "^/spotify": "https://accounts.spotify.com/"
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
