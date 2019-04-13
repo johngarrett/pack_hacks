@@ -9,6 +9,9 @@
 .history
 .svn/
 
+#Secret Key
+node/key.txt
+
 # IntelliJ related
 *.iml
 *.ipr
