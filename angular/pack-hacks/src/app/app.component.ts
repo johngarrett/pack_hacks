@@ -19,6 +19,6 @@ export class AppComponent {
   public items: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-      this.items = db.collection('/time_of_day').valueChanges();
+      this.items = db.collection('/groups').valueChanges();
   }
 }
