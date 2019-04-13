@@ -68,3 +68,22 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+angular/pack-hacks/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# misc
+angular/pack-hacks/package-lock.json
+
+# System Files
+.DS_Store
+Thumbs.db
