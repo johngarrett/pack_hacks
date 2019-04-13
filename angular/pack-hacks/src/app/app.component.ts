@@ -6,13 +6,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-root',
-  template: `
-      <ul>
-          <li *ngFor="let item of items | async">
-              <pre>{{ item | json }}</pre>
-          </li>
-      </ul>
-  `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
