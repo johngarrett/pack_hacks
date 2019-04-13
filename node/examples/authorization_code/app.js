@@ -53,7 +53,11 @@ app.get('/login', function(req, res) {
       client_id: client_id,
       scope: scope,
       redirect_uri: redirect_uri,
-      state: state
+      state: state,
+      //Changing this boolean doesn't appear to change anything.
+      //I would've imagined when true that the user would have to
+      //reauthorize every time, but that doesn't seem to happen...
+      show_dialog: false, 
     }));
 });
 
