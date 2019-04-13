@@ -1,17 +1,7 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>TuneFish</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      You can't tune a fish, but you can tune a school.
-    </p>
-    <ul>
-      <li *ngFor="let item of items | async">
-        <pre>{{ item | json }}</pre>
-      </li>
-    </ul>
-  </mat-card-content>
-</mat-card>
+<mat-toolbar color="primary">
+  TuneFish
+  <span class="space-filler"></span>
+  Logout
+</mat-toolbar>
 
 <router-outlet></router-outlet>
