@@ -19,13 +19,7 @@ export class SpotifyService {
       .append("redirect_uri", "http://localhost:4200/")
       .append("state", state)
       .append("show_dialog", "true");
-    let corsHeaders = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'http://localhost:4200'
-    });
     this.httpClient.get("/spotify/authorize", {
-      headers: corsHeaders,
       params: httpParams
     }).subscribe(
       result => console.log(result),
