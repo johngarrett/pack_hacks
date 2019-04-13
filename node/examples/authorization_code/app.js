@@ -46,7 +46,7 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email';
+  var scope = 'user-read-private user-read-email user-top-read';
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
@@ -54,10 +54,7 @@ app.get('/login', function(req, res) {
       scope: scope,
       redirect_uri: redirect_uri,
       state: state,
-      //Changing this boolean doesn't appear to change anything.
-      //I would've imagined when true that the user would have to
-      //reauthorize every time, but that doesn't seem to happen...
-      show_dialog: false, 
+      show_dialog: true, 
     }));
 });
 
@@ -103,6 +100,20 @@ app.get('/callback', function(req, res) {
         };
 
         // use the access token to access the Spotify Web API
+
+        request.get(options, function(error, response, body) {
+          console.log(body);
+        });
+
+        options = {
+          url: 'https://api.spotify.com/v1/me/top/tracks',
+          headers: { 'Authorization': 'Bearer ' + access_token },
+          limit: 1,
+          json: true
+        };
+
+        // use the access token to access the Spotify Web API
+
         request.get(options, function(error, response, body) {
           console.log(body);
         });
