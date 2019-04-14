@@ -1,6 +1,6 @@
 .thumbnail {
     height: 100px;
-    width: height;
+    width: auto;
     position: relative;
     display: inline-block;
     overflow: hidden;
