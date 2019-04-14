@@ -1,0 +1,31 @@
+# Scouting Site To-Do list
+
+- [x] Update form!!!
+- [ ] ~~Display team's current ranking in a competition on [team.html](html/team.html) (retrieved from FRC servers)~~
+- [x] Display team's name on [team.html](html/team.html) (retrieved from FRC servers)
+- [x] Design wager system w/ sign in number & password
+  - [x] Store session tokens in database to stay logged in on reload
+  - [x] Update people's wagers after a match ends, e.g. when a stand scouting form is submitted
+  - [x] Fix [getByteCoins.php](php/getByteCoins.php) returning an error when [casino.html](html/casino.html) is loaded
+  - [x] Ensure wagers are only made for future matches by using the FRC API
+  - [x] Limit people to wagering a minimum of 200 ByteCoins
+  - [x] Let people manually edit slider values for more precision using a text field
+  - [ ] ~~Start using database scores for wager checking (once score validation is done) to stop reliance on API being updated~~
+- [x] Submit multiple pictures at once
+- [x] Individual user pages
+  - [ ] Allow users to edit their own comments
+  - [ ] Allow admin to edit anyone's comments
+  - [ ] Show people's past and pending wagers
+- [ ] Implement comment liking
+  - [ ] Only admin can like comments (because of sql limitations)
+  - [ ] Display top comments somewhere
+- [ ] Add nice way of manually inputting all teams in a competition if api validation isn't working
+- [x] Make default value of score field on scouting form blank so jQuery validate catches premature submissions
+- [ ] Add admin action to reset everything for new competition
+  - [ ] Export scout_data tables to file
+  - [ ] Empty scout_data tables
+  - [ ] Change API event code and year
+  - [ ] Reset everyone's ByteCoins to 200
+  - [ ] Delete any outstanding wagers
+  - [x] Flush schedule-
+ - [ ] Switch to TBA API

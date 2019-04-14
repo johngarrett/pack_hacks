@@ -1,0 +1,16 @@
+{
+  "/spotify": {
+    "target": "https://accounts.spotify.com",
+    "pathRewrite": {
+      "^/spotify": "https://accounts.spotify.com"
+    },
+    "headers": {
+      "X-Forwarded-Host": "localhost:4200",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
+    },
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
