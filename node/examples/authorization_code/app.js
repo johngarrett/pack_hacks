@@ -110,6 +110,9 @@ app.get('/callback', function(req, res) {
              * BODY.REFRESH_TOKEN
              */
             console.log(body.refresh_token);
+            console.log(body);
+            console.log("cade LOOOOOOOOOK");
+            console.log(body[3]);
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
@@ -126,6 +129,15 @@ app.get('/callback', function(req, res) {
                     return;
                 };
                 console.log("File Created");
+                console.log("JOHNS EMAIL IS : " + body.email)
+                /**
+                 * JOHNNNNN, THIS ^^^^^^^ "body.email" is where you can get the email of the user. It has to be in this block of course though
+                 * 
+                 * ________________________________________________________________________________________
+                 * 
+                 * 
+                 * OOAODSAOOASFKASOFJASOJFIEUABFEUAB
+                 */
             });
           console.log(body);
         });
