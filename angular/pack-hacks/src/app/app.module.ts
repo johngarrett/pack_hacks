@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PlaylistComponent } from './playlist/playlist.component';
+import {OAuthModule} from "angular-oauth2-oidc";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

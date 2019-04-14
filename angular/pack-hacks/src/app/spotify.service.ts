@@ -11,20 +11,21 @@ export class SpotifyService {
   authorize() {
     let state = this.generateRandomString(16)
     document.cookie = "spotify_auth_state=" + state;
+    location.href = "https://accounts.spotify.com/authorize?response_type=code&client_id=67f4df5a3037476aaf5e3cf792bc44d6&scope=user-read-private%20user-read-email&redirect_uri=http://tune-fish.com&state=NsRIsWxdcsDmSL0J&show_dialog=true";
 
-    let httpParams = new HttpParams()
-      .append("response_type", "code")
-      .append("client_id", "67f4df5a3037476aaf5e3cf792bc44d6")
-      .append("scope", "user-top-read user-read-private user-read-recently-played")
-      .append("redirect_uri", "http://www.tune-fish.com")
-      .append("state", state)
-      .append("show_dialog", "true");
-    this.httpClient.get("/spotify/authorize", {
-      params: httpParams
-    }).subscribe(
-      result => console.log(result),
-      error => console.log(error)
-    );
+    // let httpParams = new HttpParams()
+    //   .append("response_type", "code")
+    //   .append("client_id", "67f4df5a3037476aaf5e3cf792bc44d6")
+    //   .append("scope", "user-read-private user-read-email")
+    //   .append("redirect_uri", "http://localhost:8888/")
+    //   .append("state", state)
+    //   .append("show_dialog", "true");
+    // this.httpClient.get("/spotify/authorize", {
+    //   params: httpParams
+    // }).subscribe(
+    //   result => console.log(result),
+    //   error => console.log(error)
+    // );
   }
 
   generateRandomString(length: number) {
