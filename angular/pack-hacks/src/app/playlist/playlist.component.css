@@ -1,11 +1,17 @@
 .thumbnail {
-    height: 100px;
-    width: auto;
+    height: 90px;
+    width: 90px;
     position: relative;
     display: inline-block;
     overflow: hidden;
     display: block;
     margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
