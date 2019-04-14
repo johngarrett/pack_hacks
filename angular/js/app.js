@@ -1,23 +1,11 @@
 /*global angular, $*/
+
 var app;
 var client_id = '67f4df5a3037476aaf5e3cf792bc44d6'; // Your client id
 var client_secret = '75c4580629964e78912a639855832ce8'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 var scope = 'user-read-private user-read-email user-top-read';
 
-<<<<<<< HEAD
-app.run(function ($rootScope, $location, $http, $window) {
-    'use strict';
-});
-
-app.service("SpotifyService", function ($http, $q, $window, $rootScope, $location) {
-    'use strict';
-});
-
-app.controller("GroupController", function ($scope, $http, $routeParams) {
-    'use strict';
-});
-=======
 var generateRandomString = function(length) {
   var text = '';
   var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -93,7 +81,6 @@ app.config(function (SpotifyProvider) {
 
 // app.run(function ($rootScope, $location, $http, $window) {
 //     'use strict';
->>>>>>> 9a923fe93fb73341de7698e59dd2a429aeaf6b98
 
 // });
 
@@ -171,27 +158,3 @@ app.controller('PlaylistController', function ($rootScope, $scope, $http, $windo
         }
       ];
 });
-<<<<<<< HEAD
-
-app.controller('LoginController', function ($rootScope, $scope, $http, $window, $location) {
-    'use strict';
-});
-
-app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
-    'use strict';
-
-    $routeProvider.when('/', {
-        templateUrl: 'html/login.html',
-        controller: 'LoginController'
-    }).when('/groups', {
-        templateUrl: 'html/group.html',
-        controller: 'GroupController'
-    }).when("/playlists", {
-        templateUrl: 'html/playlist.html',
-        controller: 'PlaylistController'
-    }).otherwise({
-        redirectTo: '/'
-    });
-}]);
-=======
->>>>>>> 9a923fe93fb73341de7698e59dd2a429aeaf6b98
