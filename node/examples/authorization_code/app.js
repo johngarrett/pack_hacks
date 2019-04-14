@@ -70,7 +70,9 @@ app.get('/callback', function(req, res) {
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
-
+  console.log("CODE: ")
+  console.log(code)
+  console.log(state)
   if (state === null || state !== storedState) {
     res.redirect('/#' +
       querystring.stringify({
@@ -97,6 +99,17 @@ app.get('/callback', function(req, res) {
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
 
+            /*************************************************************
+             *  CADE
+             * 
+             * 
+             * LOOK HERE
+             * 
+             * THIS IS THE REFRESH TOKEN YOU NEED TO UPLOAD 
+             * 
+             * BODY.REFRESH_TOKEN
+             */
+            console.log(body.refresh_token);
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
