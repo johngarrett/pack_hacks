@@ -1,18 +1,24 @@
 {
     "country": "US",
-    "display_name": "zeke.us",
-    "email": "zeke.alternate@gmail.com",
+    "display_name": "cademack",
+    "email": "cmack17@uncc.edu",
     "external_urls": {
-        "spotify": "https://open.spotify.com/user/zeke.us"
+        "spotify": "https://open.spotify.com/user/cademack"
     },
     "followers": {
         "href": null,
-        "total": 20
+        "total": 10
     },
-    "href": "https://api.spotify.com/v1/users/zeke.us",
-    "id": "zeke.us",
-    "images": [],
+    "href": "https://api.spotify.com/v1/users/cademack",
+    "id": "cademack",
+    "images": [
+        {
+            "height": null,
+            "url": "https://profile-images.scdn.co/images/userprofile/default/4dbb72a07e40862a3b9686c0e90e7c9a4f497f2e",
+            "width": null
+        }
+    ],
     "product": "premium",
     "type": "user",
-    "uri": "spotify:user:zeke.us"
+    "uri": "spotify:user:cademack"
 }
