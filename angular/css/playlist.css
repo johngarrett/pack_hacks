@@ -1,0 +1,58 @@
+html, body {
+    background: black;
+    background-color: black;
+}
+.thumbnail {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.title{
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.body_text{
+    color: whitesmoke;
+}
+.profile{
+    margin-top: 12.5px;
+    margin-right: 10px;
+    height: 75px;
+    width: 75px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    display: block;
+}
+
+.media{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15px;
+    background-color: #565457;
+}
+
+
+/*.media-body {
+    background: black;
+    background-color: black;
+}*/
+    /*.media-middle {
+    background: black;
+    background-color:black;
+}*/
+
