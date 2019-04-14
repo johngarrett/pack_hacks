@@ -21,6 +21,18 @@ var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 var userInfo;
 var tracks;
 
+const firebase = require("firebase");
+require("firebase/firestore");
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBAMTvZISVKpaRlizJW4WBkUNatchMEKXo',
+    authDomain: 'pack-hack.firebaseapp.com',
+    projectId: 'pack-hack'
+});
+
+var db = firebase.firestore();
+
+
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
@@ -98,21 +110,6 @@ app.get('/callback', function(req, res) {
 
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
-
-            /*************************************************************
-             *  CADE
-             * 
-             * 
-             * LOOK HERE
-             * 
-             * THIS IS THE REFRESH TOKEN YOU NEED TO UPLOAD 
-             * 
-             * BODY.REFRESH_TOKEN
-             */
-            console.log(body.refresh_token);
-            console.log(body);
-            console.log("cade LOOOOOOOOOK");
-            console.log(body[3]);
         var options = {
           url: 'https://api.spotify.com/v1/me',
           headers: { 'Authorization': 'Bearer ' + access_token },
@@ -130,16 +127,13 @@ app.get('/callback', function(req, res) {
                 };
                 console.log("File Created");
                 console.log("JOHNS EMAIL IS : " + body.email)
-                /**
-                 * JOHNNNNN, THIS ^^^^^^^ "body.email" is where you can get the email of the user. It has to be in this block of course though
-                 * 
-                 * ________________________________________________________________________________________
-                 * 
-                 * 
-                 * OOAODSAOOASFKASOFJASOJFIEUABFEUAB
-                 */
+
+                db.collection("users").doc(body.email).set({
+                  "refresh_token": refresh_token
+                }).then(function() {
+                  console.log("Document successfully updated!");
+                });
             });
-          console.log(body);
         });
 
         options = {
