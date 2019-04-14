@@ -1,9 +1,0 @@
-<div class="media media-middle" *ngFor="let group of groups">
-  <div class="media-body" >
-    <h5 class="mt-0" class = "title">{{group.name}}</h5>
-    <p class = "subtext">{{group.runtime}} hours</p>
-  </div>
-  <div *ngFor= "let user of group.users">
-    <img class="ml-3 thumbnail profile" [src]="user.image" alt="Profile image">
-  </div>
-</div>

@@ -1,0 +1,10 @@
+<div class="media media-middle" *ngFor="let song of songs">
+        <img [src]="song.image" class="img-rounded mr-3 thumbnail" alt="album_png">
+    <div class="media-body">
+        <h5 class="mt-0" class = "title">{{song.title}}</h5>
+        <p class="body_text">{{song.time}}</p>
+    </div>
+    <div *ngFor= "let user of song.users">
+        <img class="ml-3 profile img-rounded" [src]="user.image" alt="Profile image">
+</div>
+</div>
