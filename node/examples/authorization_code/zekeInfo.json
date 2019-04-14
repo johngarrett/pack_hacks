@@ -1,0 +1,18 @@
+{
+    "country": "US",
+    "display_name": "zeke.us",
+    "email": "zeke.alternate@gmail.com",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/zeke.us"
+    },
+    "followers": {
+        "href": null,
+        "total": 20
+    },
+    "href": "https://api.spotify.com/v1/users/zeke.us",
+    "id": "zeke.us",
+    "images": [],
+    "product": "premium",
+    "type": "user",
+    "uri": "spotify:user:zeke.us"
+}

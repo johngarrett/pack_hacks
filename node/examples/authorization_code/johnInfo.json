@@ -1,0 +1,24 @@
+{
+    "country": "US",
+    "display_name": "John Garrett",
+    "email": "jacgarrett18@gmail.com",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/1224518485"
+    },
+    "followers": {
+        "href": null,
+        "total": 58
+    },
+    "href": "https://api.spotify.com/v1/users/1224518485",
+    "id": "1224518485",
+    "images": [
+        {
+            "height": null,
+            "url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/11954839_931265893612158_9007263573010850301_n.jpg?_nc_cat=103&_nc_ht=scontent.xx&oh=b64a3484ee6e2788336cfce4c9025070&oe=5D41FA01",
+            "width": null
+        }
+    ],
+    "product": "premium",
+    "type": "user",
+    "uri": "spotify:user:1224518485"
+}

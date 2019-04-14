@@ -12,10 +12,14 @@ var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var fs = require('fs');
 
 var client_id = '67f4df5a3037476aaf5e3cf792bc44d6'; // Your client id
 var client_secret = '75c4580629964e78912a639855832ce8'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'http://localhost:4200/callback'; // Your redirect uri
+
+var userInfo;
+var tracks;
 
 /**
  * Generates a random string containing numbers and letters
@@ -102,6 +106,14 @@ app.get('/callback', function(req, res) {
         // use the access token to access the Spotify Web API
 
         request.get(options, function(error, response, body) {
+          userInfo = body;
+            fs.writeFile("johnInfo.json", JSON.stringify(body, null, 4), (err) => {
+                if (err) {
+                    console.error(err);
+                    return;
+                };
+                console.log("File Created");
+            });
           console.log(body);
         });
 
@@ -115,7 +127,19 @@ app.get('/callback', function(req, res) {
         // use the access token to access the Spotify Web API
 
         request.get(options, function(error, response, body) {
+          console.log('beforebody');
+          tracks = body;
+          fs.writeFile("johnTracks.json", JSON.stringify(body, null, 4), (err) => {
+            if (err) {
+              console.error(err);
+              return;
+            };
+            console.log("File Created");
+          });
+
+
           console.log(body);
+          console.log('afterbody');
         });
 
         // we can also pass the token to the browser to make requests from there
@@ -158,5 +182,5 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-console.log('Listening on 8888');
-app.listen(8888);
+console.log('Listening on 4200');
+app.listen(4200);

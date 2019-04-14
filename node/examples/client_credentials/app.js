@@ -14,7 +14,7 @@ var client_secret = '75c4580629964e78912a639855832ce8'; //Your secret
 
 // your application requests authorization
 var authOptions = {
-  url: 'https://accounts.spotify.com/api/token',
+  url: 'https://api.spotify.com/v1/me',
   headers: {
     'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
   },
@@ -30,7 +30,7 @@ request.post(authOptions, function(error, response, body) {
     // use the access token to access the Spotify Web API
     var token = body.access_token;
     var options = {
-      url: 'https://api.spotify.com/v1/users/cademack',
+      url: 'localhost:8888',
       headers: {
         'Authorization': 'Bearer ' + token
       },
