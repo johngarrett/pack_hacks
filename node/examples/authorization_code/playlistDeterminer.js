@@ -1,8 +1,19 @@
+const firebase = require("firebase");
+require("firebase/firestore");
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyBAMTvZISVKpaRlizJW4WBkUNatchMEKXo',
+    authDomain: 'pack-hack.firebaseapp.com',
+    projectId: 'pack-hack'
+});
+
+var db = firebase.firestore();
+
 var fs = require('fs');
 
-const zekeTracks = require('./zekeTracks.json');
-const johnTracks = require('./johnTracks.json');
-const cadeTracks = require('./cadeTracks.json');
+// const zekeTracks = require('./zekeTracks.json');
+// const johnTracks = require('./johnTracks.json');
+// const cadeTracks = require('./cadeTracks.json');
 
 var names = "";
 var uris = "";
@@ -16,7 +27,15 @@ var songAmount = 35;
 var prospectiveSongs = [];
 var goodSongs = [];
 
-var topTrackLists = [cadeTracks, johnTracks, zekeTracks];
+
+db.collection("users").get().then((querySnapshot) => {
+
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
+
+// var topTrackLists = [cadeTracks, johnTracks, zekeTracks];
 
 
 function isAdded(song) {

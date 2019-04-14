@@ -120,7 +120,7 @@ app.get('/callback', function(req, res) {
 
         request.get(options, function(error, response, body) {
           userInfo = body;
-            fs.writeFile("johnInfo.json", JSON.stringify(body, null, 4), (err) => {
+            // fs.writeFile("johnInfo.json", JSON.stringify(body, null, 4), (err) => {
                 if (err) {
                     console.error(err);
                     return;
@@ -137,7 +137,7 @@ app.get('/callback', function(req, res) {
         });
 
         options = {
-          url: 'https://api.spotify.com/v1/me/player/recently-played',
+          url: 'https://api.spotify.com/v1/me/top/tracks',
           headers: { 'Authorization': 'Bearer ' + access_token },
           limit: 50,
           json: true
@@ -148,6 +148,9 @@ app.get('/callback', function(req, res) {
         request.get(options, function(error, response, body) {
           console.log('beforebody');
           tracks = body;
+            /**
+             * Can you push this body / tracks value up to the user field in firebase? then it could be yanked down later
+             */
           fs.writeFile("cadeRecentTracks.json", JSON.stringify(body, null, 4), (err) => {
             if (err) {
               console.error(err);
