@@ -23,9 +23,16 @@ app.controller('PlaylistController', function ($rootScope, $scope, $http, $windo
 
 });
 
-app.controller('LoginController', function ($rootScope, $scope, $http, $window, $location) {
+app.controller('LoginController', function ($scope, Spotify) {
     'use strict';
-
+    $scope.login = function () {
+        Spotify.login().then(function (data) {
+            console.log(data);
+            alert("You are now logged in");
+        }, function () {
+            console.log('didn\'t log in');
+        })
+    };
 });
 
 app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
@@ -44,3 +51,9 @@ app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
         redirectTo: '/'
     });
 }]);
+
+app.config(function (SpotifyProvider) {
+    SpotifyProvider.setClientId('67f4df5a3037476aaf5e3cf792bc44d6');
+    SpotifyProvider.setRedirectUri('http://localhost:4200');
+    SpotifyProvider.setScope('user-read-private user-read-email user-top-read');
+});
