@@ -1,4 +1,14 @@
-Welcome to the playlist controller
+<div class="btn-group">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">TFilter</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Genre</a>
+      <a class="dropdown-item" href="#">Relevancy</a>
+      <a class="dropdown-item" href="#">A-Z</a>
+    </div>
+  </div>
 
 <div class="media media-middle" ng-repeat="song in songs">
     <img ng-src="{{song.image}}" class="img-rounded mr-3 thumbnail" alt="album_png">

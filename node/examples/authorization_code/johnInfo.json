@@ -1,5 +1,6 @@
 {
     "country": "US",
+<<<<<<< HEAD
     "display_name": "John Garrett",
     "email": "jacgarrett18@gmail.com",
     "external_urls": {
@@ -15,10 +16,31 @@
         {
             "height": null,
             "url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/11954839_931265893612158_9007263573010850301_n.jpg?_nc_cat=103&_nc_ht=scontent.xx&oh=b64a3484ee6e2788336cfce4c9025070&oe=5D41FA01",
+=======
+    "display_name": "cademack",
+    "email": "cmack17@uncc.edu",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/cademack"
+    },
+    "followers": {
+        "href": null,
+        "total": 10
+    },
+    "href": "https://api.spotify.com/v1/users/cademack",
+    "id": "cademack",
+    "images": [
+        {
+            "height": null,
+            "url": "https://profile-images.scdn.co/images/userprofile/default/4dbb72a07e40862a3b9686c0e90e7c9a4f497f2e",
+>>>>>>> f19487b5258d695b2117c006a741674fedcfc08f
             "width": null
         }
     ],
     "product": "premium",
     "type": "user",
+<<<<<<< HEAD
     "uri": "spotify:user:1224518485"
+=======
+    "uri": "spotify:user:cademack"
+>>>>>>> f19487b5258d695b2117c006a741674fedcfc08f
 }
