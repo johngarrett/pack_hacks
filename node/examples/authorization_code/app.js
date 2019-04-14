@@ -50,7 +50,7 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email user-top-read';
+  var scope = 'user-read-private user-read-email user-top-read user-read-recently-played';
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
@@ -118,9 +118,9 @@ app.get('/callback', function(req, res) {
         });
 
         options = {
-          url: 'https://api.spotify.com/v1/me/top/tracks',
+          url: 'https://api.spotify.com/v1/me/player/recently-played',
           headers: { 'Authorization': 'Bearer ' + access_token },
-          limit: 1,
+          limit: 50,
           json: true
         };
 
@@ -129,7 +129,7 @@ app.get('/callback', function(req, res) {
         request.get(options, function(error, response, body) {
           console.log('beforebody');
           tracks = body;
-          fs.writeFile("johnTracks.json", JSON.stringify(body, null, 4), (err) => {
+          fs.writeFile("cadeRecentTracks.json", JSON.stringify(body, null, 4), (err) => {
             if (err) {
               console.error(err);
               return;
