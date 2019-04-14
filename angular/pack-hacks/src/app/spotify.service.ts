@@ -15,8 +15,8 @@ export class SpotifyService {
     let httpParams = new HttpParams()
       .append("response_type", "code")
       .append("client_id", "67f4df5a3037476aaf5e3cf792bc44d6")
-      .append("scope", "user-read-private user-read-email")
-      .append("redirect_uri", "http://localhost:4200/")
+      .append("scope", "user-top-read user-read-private user-read-recently-played")
+      .append("redirect_uri", "http://www.tune-fish.com")
       .append("state", state)
       .append("show_dialog", "true");
     this.httpClient.get("/spotify/authorize", {
