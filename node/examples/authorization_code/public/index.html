@@ -1,8 +1,11 @@
 <!doctype html>
-<html>
+<html ng-app="tune-fish">
   <head>
     <title>Example of the Authorization Code flow with Spotify</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
     <style type="text/css">
       #login, #loggedin {
         display: none;
@@ -16,10 +19,10 @@
     </style>
   </head>
 
-  <body>
+  <body ng-controller="LoginController">
     <div class="container">
       <div id="login">
-        <h1>This is an example of the Authorization Code flow</h1>
+        <h1>This is an example of the Authorization Code flow {{test}}</h1>
         <a href="/login" class="btn btn-primary">Log in with Spotify</a>
       </div>
       <div id="loggedin">

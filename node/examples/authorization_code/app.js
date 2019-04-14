@@ -16,7 +16,7 @@ var fs = require('fs');
 
 var client_id = '67f4df5a3037476aaf5e3cf792bc44d6'; // Your client id
 var client_secret = '75c4580629964e78912a639855832ce8'; // Your secret
-var redirect_uri = 'http://localhost:4200/callback'; // Your redirect uri
+var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 var userInfo;
 var tracks;
@@ -182,5 +182,5 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-console.log('Listening on 4200');
-app.listen(4200);
+console.log('Listening on 8888');
+app.listen(8888);
