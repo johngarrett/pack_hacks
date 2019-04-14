@@ -1,7 +1,7 @@
 /*global angular, $*/
 
 var app;
-app = angular.module('app', ['ngRoute']);
+app = angular.module('app', ['ngRoute', 'spotify']);
 
 app.run(function ($rootScope, $location, $http, $window) {
     'use strict';
