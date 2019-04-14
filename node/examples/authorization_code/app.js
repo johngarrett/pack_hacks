@@ -121,7 +121,7 @@ app.get('/callback', function(req, res) {
         request.get(options, function(error, response, body) {
           userInfo = body;
             // fs.writeFile("johnInfo.json", JSON.stringify(body, null, 4), (err) => {
-                if (err) {
+                if (error) {
                     console.error(err);
                     return;
                 };
@@ -133,7 +133,6 @@ app.get('/callback', function(req, res) {
                 }).then(function() {
                   console.log("Document successfully updated!");
                 });
-            });
         });
 
         options = {
@@ -165,7 +164,7 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('/#' +
+        res.redirect('/#save-token?' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token

@@ -2,6 +2,10 @@
 
 app = angular.module('tune-fish', ['ngRoute']);
 
+app.config(['$locationProvider', function($locationProvider) {
+    $locationProvider.hashPrefix('');
+}]);
+
 app.run(function ($rootScope, $location, $http, $window) {
     'use strict';
 
@@ -59,7 +63,14 @@ app.controller('PlaylistController', function ($rootScope, $scope, $http, $windo
 app.controller('LoginController', function ($scope) {
     'use strict';
 
-    $scope.test = 44;
+});
+
+app.controller('SaveTokenController', function ($scope, $location) {
+    'use strict';
+    let tokens = $location.search();
+    localStorage.setItem('access_token', tokens.access_token);
+    localStorage.setItem('refresh_token', tokens.refresh_token);
+    $location.url('/groups');
 });
 
 app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
@@ -74,6 +85,9 @@ app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     }).when("/playlists", {
         templateUrl: 'html/playlist.html',
         controller: 'PlaylistController'
+    }).when("/save-token", {
+        templateUrl: 'html/save-token.html',
+        controller: 'SaveTokenController'
     }).otherwise({
         redirectTo: '/'
     });
