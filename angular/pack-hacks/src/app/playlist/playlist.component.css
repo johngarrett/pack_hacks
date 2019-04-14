@@ -1,8 +1,6 @@
 .thumbnail {
     height: 100px;
-
     width: auto;
-
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -12,7 +10,12 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
+
+.title{
+    margin-top: 20px;
+}
 .profile{
+    margin-top: 12.5px;
     padding-right:20px;
     height: 75px;
     width: 75px;
