@@ -1,33 +1,14 @@
 /*global angular, $*/
 
-var app;
-var client_id = '67f4df5a3037476aaf5e3cf792bc44d6'; // Your client id
-var client_secret = '75c4580629964e78912a639855832ce8'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
-var scope = 'user-read-private user-read-email user-top-read';
-
-var generateRandomString = function(length) {
-  var text = '';
-  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-  for (var i = 0; i < length; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
-};
-
-var state = generateRandomString(16);
-
 app = angular.module('app', ['ngRoute', 'spotify']);
 
 app.config(function (SpotifyProvider) {
-  SpotifyProvider.setClientId(client_id);
-  SpotifyProvider.setRedirectUri(redirect_uri);
-  SpotifyProvider.setScope(scope);
-  // If you already have an auth token
-  // SpotifyProvider.setAuthToken('<AUTH_TOKEN>');
+    SpotifyProvider.setClientId('67f4df5a3037476aaf5e3cf792bc44d6');
+    SpotifyProvider.setRedirectUri('http://localhost:4200');
+    SpotifyProvider.setScope('user-read-private user-read-email user-top-read');
 });
 
+<<<<<<< HEAD
  setAuthToken = function(authToken) {
             this.authToken = authToken;
             return this.authToken;
@@ -77,45 +58,79 @@ $window.addEventListener('storage', storageChanged, false);
 
 return deferred.promise;
 };
+=======
+app.run(function ($rootScope, $location, $http, $window) {
+    'use strict';
+
+});
+
+app.service("SpotifyService", function ($http, $q, $window, $rootScope, $location) {
+    'use strict';
+
+});
+
+app.controller("GroupController", function ($scope, $http, $routeParams) {
+    'use strict';
+
+});
+
+>>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
 app.controller('PlaylistController', function ($rootScope, $scope, $http, $window, $location) {
     'use strict';
     $scope.songs = [
         {
-          image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
-          title: "The title of the song",
-          time: "3:07",
-          users: [
-            {
-              image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
-            }
-          ],
+            image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
+            title: "The title of the song",
+            time: "3:07",
+            users: [
+                {
+                    image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
+                }
+            ],
         },
         {
-          image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
-          title: "The title of the song",
-          time: "3:07",
-          users: [
-            {
-              image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
-            }
-          ],
+            image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
+            title: "The title of the song",
+            time: "3:07",
+            users: [
+                {
+                    image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
+                }
+            ],
         },
         {
-          image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
-          title: "The title of the song",
-          time: "3:07",
-          users: [
-            {
-              image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
-            },
-            {
-              image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
-            }
-          ],
+            image: "http://extras.mnginteractive.com/live/media/site21/2018/0523/20180523__24DCABVSw~1.jpg",
+            title: "The title of the song",
+            time: "3:07",
+            users: [
+                {
+                    image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
+                },
+                {
+                    image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
+                }
+            ],
         }
+<<<<<<< HEAD
       ];
 });
 
+=======
+    ];
+});
+
+app.controller('LoginController', function ($scope, Spotify) {
+    'use strict';
+    $scope.login = function () {
+        Spotify.login().then(function (data) {
+            console.log(data);
+            alert("You are now logged in");
+        }, function () {
+            console.log('didn\'t log in');
+        })
+    };
+});
+>>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
 
 app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     'use strict';
@@ -132,4 +147,8 @@ app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     }).otherwise({
         redirectTo: '/'
     });
+<<<<<<< HEAD
 }]);
+=======
+}]);
+>>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
