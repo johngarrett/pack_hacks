@@ -13,11 +13,13 @@ import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PlaylistComponent } from './playlist/playlist.component';
 import {OAuthModule} from "angular-oauth2-oidc";
+import { GroupsComponent } from './groups/groups.component';
 
 @NgModule({
   declarations: [
       AppComponent,
-      PlaylistComponent
+      PlaylistComponent,
+      GroupsComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
