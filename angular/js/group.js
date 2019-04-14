@@ -1,46 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GroupsComponent } from './groups.component';
-
-describe('GroupsComponent', () => {
-  let component: GroupsComponent;
-  let fixture: ComponentFixture<GroupsComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GroupsComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GroupsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-groups',
-  templateUrl: './groups.component.html',
-  styleUrls: ['./groups.component.css']
-})
-export class GroupsComponent implements OnInit {
-
-  constructor() { }
-
-  groups = [
+var groups = [
     {
       name: "Tune-Fish Squad",
-
       runtime: 1.3,
-
       users: [
         {
           image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
@@ -55,9 +16,7 @@ export class GroupsComponent implements OnInit {
     },
     {
       name: "Niner Gang",
-
       runtime: 1.9,
-
       users: [
         {
           image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
@@ -72,9 +31,7 @@ export class GroupsComponent implements OnInit {
     },
     {
       name: "Denver Nuggets",
-
       runtime: 1.1,
-
       users: [
         {
           image: "https://www.nba.com/nuggets/sites/nuggets/files/styles/story_main_photo/public/getty-images-1057904050.jpg?itok=BHcL1Uri"
@@ -84,9 +41,4 @@ export class GroupsComponent implements OnInit {
         }
       ]
     }
-
-  ]
-  ngOnInit() {
-  }
-
-}
+  ];
