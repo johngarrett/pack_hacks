@@ -1,9 +1,7 @@
 var groups = [
     {
       name: "Tune-Fish Squad",
-
       runtime: 1.3,
-
       users: [
         {
           image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
@@ -18,9 +16,7 @@ var groups = [
     },
     {
       name: "Niner Gang",
-
       runtime: 1.9,
-
       users: [
         {
           image: "https://levinescholars.uncc.edu/sites/levinescholars.uncc.edu/files/styles/portrait_image/public/fields/field_photo/photo/SSI_3987.jpg?itok=5N0KThLp"
@@ -35,9 +31,7 @@ var groups = [
     },
     {
       name: "Denver Nuggets",
-
       runtime: 1.1,
-
       users: [
         {
           image: "https://www.nba.com/nuggets/sites/nuggets/files/styles/story_main_photo/public/getty-images-1057904050.jpg?itok=BHcL1Uri"

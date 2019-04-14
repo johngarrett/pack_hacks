@@ -1,7 +1,8 @@
 html, body {
-    background: black;
-    background-color: black;
+    background:#2b2a29;
+    background-color:#2b2a29;
 }
+
 .thumbnail {
     height: 90px;
     width: 90px;
@@ -26,7 +27,9 @@ html, body {
 
 .body_text{
     color: whitesmoke;
+    text-emphasis-color: whitesmoke;
 }
+
 .profile{
     margin-top: 12.5px;
     margin-right: 10px;
@@ -46,7 +49,6 @@ html, body {
     background-color: #565457;
 }
 
-
 /*.media-body {
     background: black;
     background-color: black;
@@ -55,4 +57,3 @@ html, body {
     background: black;
     background-color:black;
 }*/
-

@@ -1,21 +1,17 @@
 /*global angular, $*/
-
 var app;
 app = angular.module('app', ['ngRoute', 'spotify']);
 
 app.run(function ($rootScope, $location, $http, $window) {
     'use strict';
-
 });
 
 app.service("SpotifyService", function ($http, $q, $window, $rootScope, $location) {
     'use strict';
-
 });
 
 app.controller("GroupController", function ($scope, $http, $routeParams) {
     'use strict';
-
 });
 
 app.controller('PlaylistController', function ($rootScope, $scope, $http, $window, $location) {
@@ -59,7 +55,6 @@ app.controller('PlaylistController', function ($rootScope, $scope, $http, $windo
 
 app.controller('LoginController', function ($rootScope, $scope, $http, $window, $location) {
     'use strict';
-
 });
 
 app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
