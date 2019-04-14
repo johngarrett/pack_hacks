@@ -1,41 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GroupsComponent } from './groups.component';
-
-describe('GroupsComponent', () => {
-  let component: GroupsComponent;
-  let fixture: ComponentFixture<GroupsComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GroupsComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GroupsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-groups',
-  templateUrl: './groups.component.html',
-  styleUrls: ['./groups.component.css']
-})
-export class GroupsComponent implements OnInit {
-
-  constructor() { }
-
-  groups = [
+var groups = [
     {
       name: "Tune-Fish Squad",
 
@@ -84,9 +47,4 @@ export class GroupsComponent implements OnInit {
         }
       ]
     }
-
-  ]
-  ngOnInit() {
-  }
-
-}
+  ];
