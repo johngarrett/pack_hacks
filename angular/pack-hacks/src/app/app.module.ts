@@ -11,10 +11,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { environment } from '../environments/environment';
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 @NgModule({
   declarations: [
       AppComponent,
+      PlaylistComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
