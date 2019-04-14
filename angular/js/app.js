@@ -8,7 +8,6 @@ app.config(function (SpotifyProvider) {
     SpotifyProvider.setScope('user-read-private user-read-email user-top-read');
 });
 
-<<<<<<< HEAD
  setAuthToken = function(authToken) {
             this.authToken = authToken;
             return this.authToken;
@@ -58,7 +57,6 @@ $window.addEventListener('storage', storageChanged, false);
 
 return deferred.promise;
 };
-=======
 app.run(function ($rootScope, $location, $http, $window) {
     'use strict';
 
@@ -74,7 +72,6 @@ app.controller("GroupController", function ($scope, $http, $routeParams) {
 
 });
 
->>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
 app.controller('PlaylistController', function ($rootScope, $scope, $http, $window, $location) {
     'use strict';
     $scope.songs = [
@@ -111,11 +108,6 @@ app.controller('PlaylistController', function ($rootScope, $scope, $http, $windo
                 }
             ],
         }
-<<<<<<< HEAD
-      ];
-});
-
-=======
     ];
 });
 
@@ -130,7 +122,6 @@ app.controller('LoginController', function ($scope, Spotify) {
         })
     };
 });
->>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
 
 app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     'use strict';
@@ -147,8 +138,4 @@ app.config(['$routeProvider', function ($routeProvider, $locationProvider) {
     }).otherwise({
         redirectTo: '/'
     });
-<<<<<<< HEAD
 }]);
-=======
-}]);
->>>>>>> f4620507ca091b404f3bfe903ff8bdb4c5f5a298
