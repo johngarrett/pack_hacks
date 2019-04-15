@@ -28,14 +28,14 @@ var prospectiveSongs = [];
 var goodSongs = [];
 
 
-db.collection("users").get().then((querySnapshot) => {
+//
 
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
+ var topTrackLists;
+ // topTrackLists = [cadeTracks, johnTracks, zekeTracks];
 
-// var topTrackLists = [cadeTracks, johnTracks, zekeTracks];
+//ideally here the program would pull down the list of users from a specified group from firebase(and their refresh keys)
+//then the program would loop through each user and their top list of songs and push these lists onto the
+// topTrackLists variable, then the program would run out fine.
 
 
 function isAdded(song) {
